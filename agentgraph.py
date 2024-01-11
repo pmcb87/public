@@ -13,7 +13,8 @@ file_path = input("Enter the file name: ")
 # Read the text file
 with open(file_path, 'r') as file:
     text = file.read()
-
+    file.close()
+    
 # Define the regex pattern with named capture groups
 pattern = r"(?P<timestamp>\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}).*?job:\s(?P<agentjob>agent\.jobs\.[a-z\.\_]+).*?'cpuUtil': '(?P<cpuUtil>\d{1,2}\.\d{2})'"
 
